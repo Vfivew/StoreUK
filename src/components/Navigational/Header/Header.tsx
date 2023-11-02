@@ -31,6 +31,14 @@ const Header = () => {
         dispatch(setToogleModal());
     }
 
+    const handleLanguageClick = (language:string) => {
+        if (language === 'en') {
+            window.location.href = 'https://store-delta-dusky.vercel.app/';
+        } else if (language === 'uk') {
+            window.location.href = 'https://store-uk.vercel.app/';
+        }
+    };
+    
     useEffect(() => {
     if (!basketLoading && !basketError) {
         dispatch(setBasketItem(arrayBasketData))
@@ -62,8 +70,12 @@ const Header = () => {
                         {email? <NavLink to="/admin">
                             <li className="header-list-item">Адмін панель</li>
                         </NavLink>:null}
-                        <button className="header-list-item">EN</button>
-                        <button className="header-list-item">UK</button>
+                        <button className="header-list-item" onClick={() => handleLanguageClick('en')}>
+                            EN
+                        </button>
+                        <button className="header-list-item" onClick={() => handleLanguageClick('uk')}>
+                            UK
+                        </button>
                         <NavLink to="/">
                             <li className="header-list-item">Бажання</li>
                         </NavLink>
