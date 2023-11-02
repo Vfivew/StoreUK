@@ -1,0 +1,48 @@
+.banner-discount{
+    width: 100%;
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    img{
+        max-width: 1280px;
+        width: 90%;
+        border-radius:1em;
+    }
+    .banner-discount-wrapper{
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    span {
+        width: 30%;
+        top: 50%; 
+        left: 10%;
+        position: absolute;
+        font-size: 32px;
+        color: var(--thirty-color);
+        font-weight: bold;
+        z-index: 1;
+        transform: translateY(-50%); 
+    }
+    .gradient{
+        max-width: 1280px;
+        width: 90%;
+        height: 100%;
+        position:absolute;
+        top:0;
+        left: 5%;
+        z-index: 0;
+        background: linear-gradient(to right, var(--first-color), transparent);
+        border-radius:1em;
+    }
+}
+
+@media (max-width: 767px) {
+    .banner-discount{
+        span{
+        width: 65%;
+        top: 45%;
+        font-size: 14px;
+        }
+    }
+}

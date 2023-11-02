@@ -1,0 +1,70 @@
+// $size: 200px;
+
+// .button {
+//   margin: 1em;
+//   font-size: 14px;
+//   text-transform: uppercase;
+//   padding: 18px 6px;
+//   width: $size;
+//   font-weight: bold;
+//   color: black;
+//   background-color: transparent;
+//   border: none;
+//   border-radius: 1em;
+//   position: relative;
+//   overflow: hidden;
+//   cursor: pointer;
+
+//   &:hover {
+//     color:white;
+//     .wave {
+//       top:-100px;
+//     }
+//   }
+
+//   .span {
+//     position: relative;
+//   }
+
+//   .wave {
+//     position: absolute;
+//     top: -90px;
+//     left: 0;
+//     width: $size;
+//     height: $size;
+//     background: linear-gradient(45deg, #2429bc, #29ABE2);
+//     transition: .5s ease;
+
+//     &:after,
+//     &:before {
+//       content: '';
+//       position: absolute;
+//       width: 200%;
+//       height: 200%;
+//       top: 0;
+//       left: 50%;
+//       transform: translate(-50%, -75%);
+//     }
+
+//     &:after {
+//       border-radius: 40%;
+//       background: rgba(rgb(255, 255, 255), .5);
+//       animation: wave 9s linear infinite;
+//     }
+
+//     &:before {
+//       border-radius: 45%;
+//       background: rgba(rgb(241, 241, 241), 1);
+//       animation: wave 15s linear infinite;
+//     }
+//   }
+// }
+
+// @keyframes wave {
+//   0% {
+//     transform: translate(-50%, -75%) rotate(0deg);
+//   }
+//   0% {
+//     transform: translate(-50%, -75%) rotate(360deg);
+//   }
+// }

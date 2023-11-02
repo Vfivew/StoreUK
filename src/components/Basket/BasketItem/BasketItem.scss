@@ -1,0 +1,154 @@
+.basket-item-pay-info{
+  margin: 1em 0;
+  background: linear-gradient(to bottom, var(--first-color), white, var(--first-color));
+  padding: 0.5em;
+  border:1px solid black;
+  border-radius:1em;
+  font-size: var(--primary-size);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+      button{
+      background-color:var(--first-color);
+      padding: 5px;
+      border:1px solid black;
+      border-radius:1em;
+      font-weight: bold;
+      }
+      button:hover{
+      background-color:white;
+      color:var(--first-color);
+      border:1px solid var(--first-color);
+      }
+}
+
+.basket-item-pay-link{
+    width: 12%;
+}
+
+.basket-item-pay-info-image{
+    width: 100%;
+    margin: 0.3em 0 0 0.3em;
+    border: 1px solid black;
+}
+
+.basket-item-pay-info-name{
+    width: 30%;
+    font-weight: bold;
+}
+
+.basket-item-pay-info-quantity{
+    width: 20%;
+    p{
+      font-weight: bold;
+      margin: 0 2px 2px 0;
+    }
+    input{
+      background-color:white;
+      padding: 2px;
+      width: auto;
+      max-width: 50%;
+      border:1px solid var(--first-color);
+      border-radius:6px
+    }
+}
+
+.basket-item-pay-info-quantity-input{
+    max-width: 50%;
+}
+
+.basket-item-pay-info-price{
+    width: 15%;
+    font-weight: bold;
+}
+
+.basket-item-pay-info .icon {
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .basket-item-pay-info {
+    font-size: var(--primary-size); 
+    display: flex;
+    align-items: center;
+  }
+
+  .basket-item-pay-link {
+    width: 20%; 
+  }
+
+  .basket-item-pay-info-image {
+    width: 100%;
+    border: 1px solid black;
+  }
+
+  .basket-item-pay-info-name {
+    margin-left: 0.5em;
+    width: 30%; 
+  }
+
+  .basket-item-pay-info-quantity {
+    width: 20%; 
+    input{
+      max-width: 50%;
+    }
+  }
+
+  .basket-item-pay-info-quantity-input {
+    max-width: 60%; 
+  }
+
+  .basket-item-pay-info-price {
+    width: 15%;
+    font-weight: bold;
+  }
+
+  .basket-item-pay-info .icon {
+    width: 1.2em; 
+    height: 1.2em; 
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1980px) {
+  .basket-item-pay-info {
+    font-size: var(--secondary-size);
+  }
+
+  .basket-item-pay-link {
+    width: 10%;
+  }
+
+  .basket-item-pay-info-image {
+    width: 100%;
+    border: 1px solid black;
+  }
+
+  .basket-item-pay-info-name {
+    width: 40%; 
+  }
+
+  .basket-item-pay-info-quantity {
+    width: 20%;
+  }
+
+  .basket-item-pay-info-quantity-input {
+    max-width: 70%; 
+    height: 2em;
+    font-size: var(--secondary-size); 
+    
+  }
+
+  .basket-item-pay-info-price {
+    width: 15%;
+    font-weight: bold;
+  }
+
+  .basket-item-pay-info .icon {
+    width: 2.5em; 
+    height: 2.5em; 
+    cursor: pointer;
+  }
+}

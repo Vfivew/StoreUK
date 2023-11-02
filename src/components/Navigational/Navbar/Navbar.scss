@@ -1,0 +1,116 @@
+.nav {
+    width: 100%;
+    min-height: 3em;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color:var(--fourth-color);
+    border-bottom:1px solid black;
+    border-radius: 0 0 1em 1em ;
+        .nav-wrapper{
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: var(--secondary-size);
+        max-width: 1280px;
+            .nav-span{
+                .nav-phone-icon{
+                    margin: 0 6px -1px 0;
+                }
+            }
+        }
+        .nav-img {
+        margin-left: 1em;
+        margin-right: 1em;
+        width: 4%;
+        text-align: center;
+        }
+        .nav-number {
+        color:black;
+        margin-right: 1em;
+        font-weight: bold;
+        }
+        .nav-list{
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+            .nav-menu-item{
+            margin: 0.7em 1em;
+            color:black;
+            }
+            a:hover,
+            a:focus {
+            background-color:rgba(253, 253, 253, 0.3);
+            }
+        }
+}
+
+.nav-button,
+.nav-button-close {
+    display: none;
+}
+
+.nav-menu.active {
+    transform: translateY(0); 
+}
+
+/*MEDIA*/
+
+@media (max-width: 767px) {
+    .nav-menu {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items:center;
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    background-color: var(--thirty-color);
+    border-top:2px solid var(--first-color); 
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateY(100%); 
+    height: 50vh;
+    overflow: auto;
+    z-index: 3;
+        .nav-list{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        flex-wrap: wrap;
+            .nav-menu-item{
+            margin: 1em 1em;
+            }
+            a:hover,
+            a:focus {
+            background-color:rgba(102, 179, 211, 0.3);
+            }
+        }
+    }
+    
+    .nav-button-close{
+    display: block;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    }
+
+    .nav-button {
+    display: block;
+    }    
+
+    .nav{
+        .nav-wrapper{
+            .nav-img{
+                width: 60px;
+            }
+        }
+    }
+}
+

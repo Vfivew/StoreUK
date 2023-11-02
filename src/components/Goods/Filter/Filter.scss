@@ -1,0 +1,94 @@
+.filter-section{
+    background-color:rgb(253, 253, 253);
+    border: 1px solid var(--first-color);
+    border-radius:1em;
+    margin-right: 2em;
+    padding: 0.3em;
+    .button {
+        display: none;
+    }
+    .filter-list{
+        display: flex;
+        flex-direction: column;
+        button{
+            text-align: left;
+            padding: 0.5em;
+            border-radius:12px;
+        }
+        button:hover,
+        button:focus {
+           color:var(--first-color)
+        }
+        button.active {
+            background-color:var(--first-color);
+            color:white;
+        }
+    }
+}
+.filter-button{
+    display: none;
+}
+
+
+@media (max-width: 767px) {
+    .filter-button{
+        transform: rotate(90deg);
+        position: absolute;
+        top: 176px;
+        left: 0.5em;
+        width: auto;
+        border:1px solid var(--thirty-color);
+        border-radius:1em;
+        display: block;
+        font-weight: bold;
+        font-size: var(--secondary-size);
+        padding: 0.5em 1em;
+        background-color:var(--first-color);
+        color:var(--thirty-color);
+    }
+    .filter-section{
+        overflow: scroll;
+        position: fixed;
+        width: 35%;
+        border:none;
+        border-right: 1px solid var(--first-color);
+        border-radius:0%;
+        border-bottom-right-radius:1em;
+        border-top-right-radius:1em;
+        height: 100vh;
+        top:0;
+        left:0;
+        transition: transform 0.3s ease-in-out, opacity  0.1s ease-in-out;
+        transform: translateX(-120%); 
+        z-index: 5;
+        .filter-list{
+            .button {
+            margin: 1em 0.5em;
+            display: block;
+            font-size: 11px;
+            width: 60px;
+                &:hover {
+                    .wave {
+                    top:-25px;  
+                    }
+                }
+                .wave {
+                    top: -20px;
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+            .button:hover{
+                color:white;
+            }
+        }
+    }
+    .filter-section.active{
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        transform: translateX(0%); 
+    }
+    .filter-close-button{
+        margin-top: 1em;
+        display: block;
+    }
+}

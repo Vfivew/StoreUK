@@ -1,0 +1,195 @@
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.grid-container {
+    margin: 1em 0;
+    max-width: 1270px;
+    width: 90%;
+    height: auto;
+    max-height: 570px;
+    display: grid;
+    grid-template-columns: 65% 35%;
+
+}
+.block1 {
+    grid-column: 1 / span 1;
+    grid-row: span 2;
+    margin: 1em 0 1em 1em;
+    position: relative;
+}
+
+.block2 {
+    cursor: pointer;
+    position:relative;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    background-color: var(--first-color);
+    margin: 1em;
+    border-radius: 1em;
+    max-width: 500px;
+    max-height: 256px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    img{
+    max-width: 90%;
+    max-height: 90%;
+    }
+    .line{
+        display: flex;
+        align-items:center;
+        color:rgb(246, 255, 0);
+        font-weight: bold;
+        position: absolute;
+        background-color:rgb(64, 148, 232, 0.8);
+        width: 400px;
+        height: 20%;
+        bottom:0;
+        left:0;
+        transform-origin: top left;
+        transform: rotate(-45deg);
+        span{
+            margin-left: 8px;
+        }
+    }
+}
+
+.block3 {
+    cursor: pointer;
+    position:relative;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    background-color: var(--first-color);
+    margin: 0 1em 1em 1em;
+    border-radius: 1em;
+    max-width: 500px;
+    max-height: 256px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    img{
+    max-width: 90%;
+    max-height: 90%;
+    }
+    .line{
+        display: flex;
+        align-items:center;
+        color:rgb(246, 255, 0);
+        font-weight: bold;
+        position: absolute;
+        background-color:rgb(64, 148, 232, 0.8);
+        width: 400px;
+        height: 20%;
+        bottom:0;
+        left:0;
+        transform-origin: top left;
+        transform: rotate(-45deg);
+        span{
+            margin-left: 8px;
+        }
+    }
+}
+
+.block2:hover, .block2:focus, .block3:hover, .block3:focus {
+    box-shadow: 0 6px 10px rgba(108, 182, 214, 0.7);
+    scale: 1.02;
+}
+
+.block-sticker{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    background-color: rgb(0, 119, 255, 0.8);
+    color: var(--thirty-color);
+    z-index: 2;
+    border-top-right-radius:1em;
+    border-bottom-right-radius: 1em;
+    h3{
+        width: 100%;
+        font-size: var(--secondary-size);
+        font-weight: bold;
+        text-align: left;
+        padding: 1em 1em 1em 3em;
+    }
+    p{
+        width: 100%;
+        font-size: var(--secondary-size);
+        text-align: left;
+        padding: 0 1em 1em 3em;
+        cursor: pointer;
+    }
+    p::after {
+    content: "";
+    display: block;
+    width: 6.2em;
+    height: 1px;
+    background-color: rgb(255, 255, 255); 
+    margin-bottom: 1px; 
+    }
+    p:hover::after {
+    background-color: rgb(157, 157, 157);
+    }
+}
+
+@media (max-width: 767px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-height: 1200px;
+    }
+
+    .block1 {
+        width: auto;
+        height: auto;
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 2;
+        background-color: #f0f0f0;
+        margin: 1em 1em;
+    }
+
+    .block2 {
+        height: 200px;
+        grid-row: 2 / span 1; 
+        grid-column: 1 / span 1; 
+        background-color: var(--first-color);
+        margin: 1em 1em;
+        max-width: 500px;
+        max-height: 200px;
+    }
+
+    .block3 {
+        grid-row: 2 / span 1; 
+        grid-column: 2 / span 1; 
+        background-color: var(--first-color);
+        margin: 1em 1em;
+        max-width: 525px;
+        max-height: 200px;
+    }
+}
+
+
+@media (max-width:460px) {
+    .block-sticker{
+    width: 50%;
+    height: 50%;
+    h3{
+        padding: 0.5em 0.5em 0.5em 2em;
+    }
+    p{
+        padding: 0 0.5em 0.5em 2em;
+    }
+}
+}
+

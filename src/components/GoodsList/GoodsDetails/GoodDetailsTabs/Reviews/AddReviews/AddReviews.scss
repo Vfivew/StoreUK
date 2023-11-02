@@ -1,0 +1,48 @@
+.add-reviews-container {
+  margin: 1em 0;
+  padding: 20px;
+  border: 1px solid var(--first-color);
+  background-color: #ffffff;
+  border-radius: 8px;
+  .input-field {
+    margin-bottom: 0.5em;
+    textarea{
+      margin-top: 0.5em;
+    }
+    .review-text {
+      width: 100%;
+      height: 4em;
+      padding: 4px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .review-dis,
+    .review-adv {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 4px;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  button {
+    margin-top: 0.5em;
+    background-color: var(--first-color);
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    &:not(:disabled):hover {
+      color: black;
+    }
+  }
+}

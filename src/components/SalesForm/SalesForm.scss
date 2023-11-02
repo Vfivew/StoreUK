@@ -1,0 +1,147 @@
+.form-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--primary-font);
+  background-color: var(--thirty-color);
+  max-height: 700px;
+}
+
+.form-block {
+  width: 50%;
+  background-color:var(--first-color);
+  border:1px solid var(--second-color);
+  border-radius:1em;
+  margin: 1em 1em 1em 1em;
+  padding: 1em; 
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.form-block label {
+  display: block;
+  margin-bottom: 0.5em; 
+}
+
+.form-block input,
+.form-block select {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em; 
+  border:1px solid var(--second-color);
+  border-radius: 4px; 
+  outline: none;
+  transition: border-color 0.3s; 
+}
+
+.form-block input:focus,
+.form-block select:focus {
+  border-color: var(--thirty-color); 
+}
+
+.form-basket-items {
+  width: 50%;
+}
+
+.form-basket-items-list {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  background-color:var(--first-color);
+  width: 95%;
+  margin: 1em 0 1em 1em;
+  padding: 0.3em 0 0.3em 0;
+  list-style: none;
+  border:1px solid var(--second-color);
+  border-radius:1em;
+}
+
+.error-message{
+  color:red;
+}
+
+.form-basket-item-message{
+  padding: 1em;
+  font-weight: bold;
+}
+.inputs, .select{
+  background-color:white;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-content {
+  margin: 1em;
+  background:var(--thirty-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+}
+
+label{
+  margin-top: 0.5em;
+}
+
+.form li {
+  background-color:var(--first-color);
+  margin: 1em;
+}
+
+@media (max-width: 767px) { 
+  .form-block input,
+  .form-block select {
+    width: 100%; 
+    padding: 0.5em;
+    margin-bottom: 0.3em; 
+  }
+
+  .form {
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 900px;
+  }
+
+  .form-block {
+    width: 90%;
+    margin: 1em;
+  }
+
+  .form-basket-items {
+    width: 95%;
+  }
+}
+
+@media (min-width: 1980px) {
+  .form{
+    max-height: 900px;
+  }
+  .form-block input,
+  .form-block select {
+    font-size: var(--secondary-size); 
+  }
+
+  .form-block label {
+    font-size: var(--secondary-size); 
+  }
+
+  .form-block button {
+    font-size: var(--secondary-size); 
+  }
+}
